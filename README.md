@@ -2,6 +2,7 @@
 
 This Symfony project demonstrates integrating with Shift4 and ACI payment services through API endpoints and CLI commands.
 
+*some API functionalities may not be available due to lack of 3DS API endpoint validation.
 ## Requirements
 
 To set up and work with this application, ensure you have the following applications installed on your development machine:
@@ -34,7 +35,13 @@ Install PHP dependencies using Composer:
 Example Command:
 
     php bin/console app:example shift4 --amount=100 --currency=USD --cardNumber=1234567890123456 --cardExpYear=2025 --cardExpMonth=01 --cardCvv=123
-Uuse without prefixes: --amount  --currency --cardNumber --cardExpYear --cardExpMonth --cardCvv  // there are just for demonstration
+Use without prefixes: --amount  --currency --cardNumber --cardExpYear --cardExpMonth --cardCvv  // there are just for demonstration
+
+## Setup testing environment
+
+### Create test environment and configuration
+
+    cp phpunit.xml.dist phpunit.xml
 
 ## Running Tests
 Run PHPUnit tests to ensure everything is working correctly:

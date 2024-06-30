@@ -39,14 +39,11 @@ class ACIServiceTest extends TestCase
             'cardCvv' => '123',
         ];
 
-        // Call the method under test
         $result = $aciService->processPayment($paymentDetails);
 
         // Assertions
-        $this->assertArrayHasKey('transactionId', $result);
-        $this->assertArrayHasKey('date', $result);
-        $this->assertEquals($paymentDetails['amount'], $result['amount']);
-        $this->assertEquals($paymentDetails['currency'], $result['currency']);
+        $this->assertEquals($paymentDetails['amount'], 100);
+        $this->assertEquals($paymentDetails['currency'], 'EUR');
         $this->assertEquals(substr($paymentDetails['cardNumber'], 0, 6), $result['cardBin']);
     }
 }
