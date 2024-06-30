@@ -40,3 +40,9 @@ Uuse without prefixes: --amount  --currency --cardNumber --cardExpYear --cardExp
 Run PHPUnit tests to ensure everything is working correctly:
 
     vendor/bin/phpunit
+
+### Service Tests:
+- Shift4ServiceTest.php: Tests for Shift4Service.
+- ACIServiceTest.php: Tests for ACIService.
+- Mocking: Use PHPUnit's MockHttpClient to mock HTTP responses from Shift4 and ACI APIs.
+- Assertions: Verify service methods (processPayment) return expected results based on mocked API responses.
